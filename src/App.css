@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+/* ---  Navbar  --- */
+.navbar {
+   box-sizing: border-box;
+   height: 64px;
+   box-shadow: inset 0 -1px 0 rgb(100 121 143 / 12%);
+   padding: 8px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar__brand, .navbar__search, .navbar__profile {
+   display: flex;
+   align-items: center;
+   height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Brand */
+.navbar__brand {
+   width: 238px;
+   padding-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar__brand-navlink-container {
+   padding: 4px 0 0 3px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Search - Profile */
+.navbar__flex-container {
+   flex-grow: 1;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Search */
+.navbar__search {
+   flex-grow: 1;
+}
+
+.navbar__search__form-container {
+   height: 100%;
+   flex-grow: 1;
+}
+
+.navbar__search form {
+   background-color: #f1f3f4;
+   height: 100%;
+   max-width: 722px;
+   display: flex;
+   align-items: center;
+   border-radius: 8px;
+}
+
+.navbar__search form div {
+   padding: 0 8px 0 11px;
+}
+
+.navbar__search form div button svg {
+   transform: scale(0.938);
+}
+
+.navbar__search form .slader {
+   padding-right: 8px;
+   padding-top: 4px;
+}
+
+.navbar__search form input {
+   flex-grow: 3;
+   border: none;
+   background-color: transparent;
+   font: normal 15px Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+/* Me quede en estilizar el focus del form */
+.navbar__search .focused {
+   background-color: #fff;
+   box-shadow: 0 1px 2px #bbb;
+}
+
+.navbar__search form input::placeholder {
+   color: #939495;
+   letter-spacing: 0.4px;
+   font-weight: 530;
+}
+
+.navbar__search form input:focus {
+   outline: none;
+}
+
+/* Icons */
+.navbar__icon {
+   background-color: transparent;
+   border: none;
+   border-radius: 50%;
+   color: #5f6368;
+   cursor: pointer;
+}
+
+.navbar__icon svg {
+   width: 24px !important;
+   height: 24px !important;
+}
+
+.navbar__icon:hover {
+   background-color: #3c404314;
+}
+
+.navbar__icon:active {
+   background-color: #3c40431f;
+}
+
+.navbar__icon:focus {
+   background-color: #3c40431a;
+}
+
+.navbar__brand .navbar__icon {
+   padding: 9px 8.5px;
+   margin: 0 6px;
+   flex-grow: 1;
 }
